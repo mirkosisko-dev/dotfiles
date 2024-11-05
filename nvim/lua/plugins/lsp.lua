@@ -17,13 +17,13 @@ return {
 		lazy = false,
 		config = function()
 			local border = {
-				{ "┌", "FloatBorder" },
+				{ "╭", "FloatBorder" },
 				{ "─", "FloatBorder" },
-				{ "┐", "FloatBorder" },
+				{ "╮", "FloatBorder" },
 				{ "│", "FloatBorder" },
-				{ "┘", "FloatBorder" },
+				{ "╯", "FloatBorder" },
 				{ "─", "FloatBorder" },
-				{ "└", "FloatBorder" },
+				{ "╰", "FloatBorder" },
 				{ "│", "FloatBorder" },
 			}
 			local handlers = {
