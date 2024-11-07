@@ -22,7 +22,7 @@ config = {
 	use_fancy_tab_bar = false,
 	show_new_tab_button_in_tab_bar = false,
 	-- enable_tab_bar = false,
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" }),
+	font = wezterm.font("JetBrainsMono Nerd Font"),
 }
 
 return config
