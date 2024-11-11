@@ -1,9 +1,23 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+local opt = vim.opt
+
+-- Tabs & indentation
+opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2    -- 2 spaces for indent width
+opt.expandtab = true  -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
+
+-- Search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
+
+-- Clipboard
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+
+-- Split windows
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
+
+-- Misc
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.opt.cursorline = true
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#cba6f7" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#b4befe" })
