@@ -17,7 +17,6 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 			local mason_lspconfig = require("mason-lspconfig")
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local border = {
 				{ "╭", "FloatBorder" },
 				{ "─", "FloatBorder" },
@@ -27,10 +26,6 @@ return {
 				{ "─", "FloatBorder" },
 				{ "╰", "FloatBorder" },
 				{ "│", "FloatBorder" },
-			}
-			local handlers = {
-				["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-				["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
 			}
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local keymap = vim.keymap

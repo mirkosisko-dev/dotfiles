@@ -35,8 +35,16 @@ return {
 			require("telescope").setup({
 				pickers = {
 					find_files = {
-						hidden = true,
-						no_hidden = true,
+						find_command = {
+							"rg",
+							"--no-ignore",
+							"--hidden",
+							"--files",
+							"-g",
+							"!**/node_modules/*",
+							"-g",
+							"!**/.git/*",
+						},
 					},
 				},
 				extensions = {
