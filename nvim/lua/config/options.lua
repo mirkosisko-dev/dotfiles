@@ -1,26 +1,30 @@
+vim.cmd("let g:netrw_liststyle = 3")
+
 local opt = vim.opt
 
--- Linebreak on word instead of character
-opt.linebreak = true
+-- Relative and absolute numbers
+opt.relativenumber = true
+opt.number = true
 
 -- Tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
 
--- Search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+-- Search
+opt.ignorecase = true
+opt.smartcase = true
+
+-- Backspace
+opt.backspace = "indent,eol,start"
+
+-- Terminal colors
+opt.termguicolors = true
 
 -- Clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append("unnamedplus")
 
--- Split windows
-opt.splitright = true -- split vertical window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
-
--- Misc
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#b4befe" })
+-- Split windoes
+opt.splitright = true
+opt.splitbelow = true
