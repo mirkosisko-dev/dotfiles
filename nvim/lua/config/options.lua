@@ -1,4 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#b4befe" })
 
 local opt = vim.opt
 

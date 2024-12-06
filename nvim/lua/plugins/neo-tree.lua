@@ -8,7 +8,12 @@ return {
 		},
 		config = function()
 			vim.keymap.set("n", "<leader>ee", ":Neotree filesystem toggle right<CR>", { desc = "Toggle file explorer" })
-      vim.keymap.set("n", "<leader>ef", ":Neotree reveal<CR>", { desc = "Toggle file explorer on current file" })
+			vim.keymap.set(
+				"n",
+				"<leader>ef",
+				":Neotree reveal right<CR>",
+				{ desc = "Toggle file explorer on current file" }
+			)
 			require("neo-tree").setup({
 				filesystem = {
 					filtered_items = {
