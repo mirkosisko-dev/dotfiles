@@ -29,3 +29,13 @@ opt.clipboard:append("unnamedplus")
 -- Split windoes
 opt.splitright = true
 opt.splitbelow = true
+
+-- Enable break indent
+opt.breakindent = true
+
+-- Save undo history
+opt.undofile = true
+
+-- Spell Checker
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
