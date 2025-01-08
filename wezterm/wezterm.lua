@@ -30,7 +30,7 @@ config = {
 
 	-- Font
 	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 18,
+	font_size = 20,
 }
 
 return config

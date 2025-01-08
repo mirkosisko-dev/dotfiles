@@ -37,5 +37,8 @@ opt.breakindent = true
 opt.undofile = true
 
 -- Spell Checker
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+opt.spelllang = "en_us"
+opt.spell = true
+
+-- Confirm to save changes before exiting modified buffer
+opt.confirm = true

@@ -12,6 +12,10 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving down half-page" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving up half-page" })
 
+-- Keep search terms in the middle of the screen
+keymap.set("n", "n", "nzzzv", { desc = "Jump to next search term" })
+keymap.set("n", "N", "Nzzzv", { desc = "Jump to previous search term" })
+
 -- TIP: Disable arrow keys in normal mode
 keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
