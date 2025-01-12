@@ -15,7 +15,7 @@ config = {
 	color_scheme = "Catppuccin Mocha",
 
 	-- Window config
-	window_background_opacity = 0.8,
+	-- window_background_opacity = 0.8,
 
 	-- Tab config
 	colors = {
@@ -31,6 +31,34 @@ config = {
 	-- Font
 	font = wezterm.font("JetBrainsMono Nerd Font"),
 	font_size = 20,
+
+	-- Keybindings
+	keys = {
+		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+		{
+			key = "LeftArrow",
+			mods = "OPT",
+			action = wezterm.action({ SendString = "\x1bb" }),
+		},
+		-- Make Option-Right equivalent to Alt-f; forward-word
+		{
+			key = "RightArrow",
+			mods = "OPT",
+			action = wezterm.action({ SendString = "\x1bf" }),
+		},
+		-- Make CMD-Left move to the start of sentence
+		{
+			key = "LeftArrow",
+			mods = "CMD",
+			action = wezterm.action({ SendString = "\x1bOH" }),
+		},
+		-- Make CMD-Right move to the end of sentence
+		{
+			key = "RightArrow",
+			mods = "CMD",
+			action = wezterm.action({ SendString = "\x1bOF" }),
+		},
+	},
 }
 
 return config
