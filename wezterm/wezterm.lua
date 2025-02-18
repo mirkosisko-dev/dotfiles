@@ -11,9 +11,6 @@ config = {
 	-- Only keep the resizable border
 	window_decorations = "RESIZE",
 
-	-- Colorscheme
-	color_scheme = "Catppuccin Mocha",
-
 	-- Window config
 	-- window_background_opacity = 0.8,
 
@@ -60,5 +57,15 @@ config = {
 		},
 	},
 }
+
+-- Colorscheme
+local file = io.open(wezterm.config_dir .. "/colorscheme", "r")
+print(file)
+if file then
+	config.color_scheme = file:read("*a")
+	file:close()
+else
+	config.color_scheme = "Tokyo Night Night"
+end
 
 return config

@@ -1,5 +1,8 @@
-/raycast
 .gitconfig
+
+/raycast
+/configstore
+/karabiner
 
 # misc
 .DS_Store

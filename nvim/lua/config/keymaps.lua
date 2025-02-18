@@ -25,3 +25,7 @@ keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 -- Shift + J/K moves selected lines down/up in visual Mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move selected line down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move selected line up" })
+
+-- Open Todos
+keymap.set("n", "<leader>owt", ":vsplit ~/work/todo<cr>", { desc = "Open work todos" })
+keymap.set("n", "<leader>opt", ":vsplit ~/personal/todo<cr>", { desc = "Open personal todos" })
