@@ -5,9 +5,10 @@ return {
 		priority = 1000,
 		opts = {
 			style = "night",
-			no_italic = true,
 			dim_inactive = true,
 			plugins = { auto = true },
+			styles = { comments = { italic = false }, keywords = { italic = false } },
+			-- transparent = true,
 		},
 		config = function(_, opts)
 			require("tokyonight").setup(opts)
