@@ -1,18 +1,29 @@
 return {
 	"L3MON4D3/LuaSnip",
-	-- follow latest release.
-	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	-- install jsregexp (optional!).
+	version = "v2.*",
 	build = "make install_jsregexp",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
-			require("luasnip").filetype_extend("all", { "loremipsum" })
 		end,
 	},
 	config = function()
-		print(vim.fn.stdpath("config") .. "/snippets")
-		require("luasnip.loaders.from_vscode").lazy_load({ paths = vim.fn.stdpath("config") .. "/snippets" })
+		local ls = require("luasnip")
+		local config_path = vim.fn.stdpath("config")
+
+		-- Load Lua snippets
+		require("luasnip.loaders.from_lua").load({ paths = config_path .. "/snippets" })
+
+		-- Load friendly-snippets
+		require("luasnip.loaders.from_vscode").lazy_load()
+
+		-- Configure LuaSnip
+		ls.config.set_config({
+			history = true,
+			updateevents = "TextChanged,TextChangedI",
+			enable_autosnippets = true,
+		})
 	end,
 }
+
