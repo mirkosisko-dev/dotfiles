@@ -6,6 +6,8 @@ local opt = vim.opt
 -- Relative and absolute numbers
 opt.relativenumber = true
 opt.number = true
+opt.wrap = true
+opt.linebreak = true
 
 -- Tabs & indentation
 opt.tabstop = 2

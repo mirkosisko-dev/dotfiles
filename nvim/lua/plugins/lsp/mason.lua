@@ -29,6 +29,7 @@ return {
 				"prismals",
 				"ts_ls",
 				"gopls",
+				"pyright",
 			},
 			automatic_installation = true,
 		})
