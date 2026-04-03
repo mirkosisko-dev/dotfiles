@@ -1,0 +1,27 @@
+# Theme & Appearance
+theme = TokyoNight
+term = xterm-256color
+window-colorspace = display-p3
+macos-titlebar-style = hidden
+window-padding-balance = true 
+
+# Window Geometry
+window-width = 160
+window-height = 62
+window-padding-x = 10
+window-padding-y = 10
+resize-overlay = never
+window-save-state = never
+
+# Font
+font-family = JetBrainsMono NFM Regular
+font-size = 20
+
+# Mouse & Interaction
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+confirm-close-surface = false
+
+# Shell Integration
+# Disables cursor/title control but keeps other features like prompt marking
+shell-integration-features = no-cursor,sudo,no-title
